@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Ceremony</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="quiz">
+        <h1 class="quiz__title quiz__title-main text-center"><strong>|</strong> THE SORTING CEREMONY <strong>|</strong></h1>
+        <h3 class="text-center">組分け帽子があなたの選択を待っています。</h3>
+        <img src="img/hat.png" alt="sorting-hat">
+        <div class="quiz__start-section">
+            <button type="button" class="quiz__button quiz__button-start" onclick="start();"><strong>Test Start</strong></button>
+        </div>
+    </article>
+    
+    <article class="quiz quiz-question">
+        <div class="quiz__progress">
+            <div class="quiz__progress-bar" style="width: calc(100/10*1%)" ></div>
+        </div>
+        <h2 id="title" class="quiz__title quiz__title-question text-center">문제</h2>
+        <input id="type" type="hidden" value="EI">
+        <div class="quiz__decoration quiz__decoration-rectangle"></div>
+            <button id="A" type="button" class="quiz__button quiz__button-answer">답변 A</button>
+        <div class="quiz__decoration quiz__decoration-mid-rectangle"></div>   
+            <button id="B" type="button" class="quiz__button quiz__button-answer">답변 B</button>
+        <div class="quiz__decoration quiz__decoration-rectangle"></div>
+        <img class="quiz__image quiz__image-pocket" src="img/hat.png" alt="sorting-hat">
+    </article>
+   
+    <article class="quiz quiz-result">
+        <div class="result-container">
+            <div class="result-left">
+                <div class="quiz__message quiz__message-result">THE SORTING CEREMONY</div>
+                <span class="quiz__message quiz__message-result">組分け帽子があなたの選択을待っています。</span>
+                <img id="img" src="img/Gryffindor.png"></img>
+                <h2 id="member" class="text-center">Guitar, Hide</h2>
+                <h3 id="explain" class="quiz__description quiz__description-result text-center">당신은 히데입니다.</h3>
+                <div class="selection-message">
+                    <p id="selection-text">この寮を選択しますか？</p>
+                    <p class="alternative-text">他の寮を選択しますか？</p>
+                    <div class="choice-buttons">
+                        <button id="confirm-house" class="choice-btn">選択します</button>
+                        <button id="choose-different" class="choice-btn">いいえ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result-right house-selection-area" style="display: none;">
+                <div class="house-grid">
+                    <div class="house-option" data-house="G">
+                        <img src="img/Gryffindor.png" alt="Gryffindor">
+                        <span>グリフィンドール</span>
+                    </div>
+                    <div class="house-option" data-house="S">
+                        <img src="img/Slytherin.png" alt="Slytherin">
+                        <span>スリザリン</span>
+                    </div>
+                    <div class="house-option" data-house="R">
+                        <img src="img/Ravenclaw.png" alt="Ravenclaw">
+                        <span>レイブンクロー</span>
+                    </div>
+                    <div class="house-option" data-house="H">
+                        <img src="img/Hufflepuff.png" alt="Hufflepuff">
+                        <span>ハッフルパフ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <span class="quiz__message quiz__message-share"></span>
+        <!- Go to www.addthis.com/dashboard to customize your tools -> <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-607adf2e4181a0fa"></script>
+</body>
+</html>
